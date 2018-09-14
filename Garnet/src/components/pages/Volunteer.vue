@@ -10,23 +10,23 @@
   import Top from'../common/Top.vue'
   import alinkword from'../common/Link.vue'
   export default {
-    name: 'Law',
+    name: 'Style',
     components:{
       alinkword,
       Top
     },
     data(){
       return{
-        urls:'../../../static/img/jicengzhili.png',
-        links:[{link:'/Grassroots_footer/1',title:'信访稳定'}
-          ,{link:'/Grassroots_footer/2',title:'普法宣传'}
-          ,{link:'/Grassroots_footer/3',title:'法律咨询'}]
+        urls:'../../../static/img/zhiyuanfuwu@2x.png',
+        links:[{link:'/Volunteer_footer/1',title:'居家养老'}
+          ,{link:'/Volunteer_footer/2',title:'阳光助弱(残)'}
+          ,{link:'/Volunteer_footer/3',title:'妇女之家'}
+          ,{link:'/Volunteer_footer/4',title:'积分兑换'}
+        ]
       }
     }
-
-
   }
 </script>
-<style>
+<style scoped>
 
 </style>

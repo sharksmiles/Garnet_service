@@ -1,7 +1,7 @@
 <template>
   <div>
     <top :img="urls"></top>
-    <alinkword :tar="links"></alinkword>
+     <alinkword :tar="links"></alinkword>
     <router-view></router-view>
   </div>
 </template>
@@ -10,23 +10,21 @@
   import Top from'../common/Top.vue'
   import alinkword from'../common/Link.vue'
   export default {
-    name: 'Law',
+    name: 'Style',
     components:{
       alinkword,
       Top
     },
     data(){
       return{
-        urls:'../../../static/img/jicengzhili.png',
-        links:[{link:'/Grassroots_footer/1',title:'信访稳定'}
-          ,{link:'/Grassroots_footer/2',title:'普法宣传'}
-          ,{link:'/Grassroots_footer/3',title:'法律咨询'}]
+        urls:'../../../static/img/wenhuafuwu@2x.png',
+        links:[{link:'/style_footer/1',title:'全民阅读'}
+          ,{link:'/style_footer/2',title:'社区教育'}
+          ,{link:'/style_footer/3',title:'健身运动'}]
       }
     }
-
-
   }
 </script>
-<style>
+<style scoped>
 
 </style>

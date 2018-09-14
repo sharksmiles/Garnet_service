@@ -20,15 +20,16 @@
 <style scoped>
   ul{
     display: flex;
-    height: 50px;
-
+    height: 45px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    border-bottom: 1px solid #e0e0e0;
   }
   li{
     flex: 3;
     text-align: center;
-    line-height: 50px;
+    line-height: 45px;
     border-right: 1px solid #e0e0e0;
+    font-size: 13px;
   }
   li:last-child{
     border-right: none;

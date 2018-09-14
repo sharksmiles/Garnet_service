@@ -14,5 +14,12 @@ export default {
 #app {
   margin: 0px;
   padding: 0px;
+
 }
+  *{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+
 </style>

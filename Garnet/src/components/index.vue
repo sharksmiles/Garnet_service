@@ -4,12 +4,24 @@
       <img src="../img/fuwudaoh@2x.png" alt="">
     </div>
     <div class="nav-title">
-      <div class="nav-title-item"><img src="../img/dang@2x.png" alt=""><p>党员服务</p></div>
-      <div class="nav-title-item"><img src="../img/lvyou@2x.png" alt=""><p>旅游服务</p></div>
-      <div class="nav-title-item"><img src="../img/minsh@2x.png" alt=""><p>民生服务</p></div>
-      <div class="nav-title-item"><img src="../img/jic@2x.png" alt=""><p>基层治理</p></div>
-      <div class="nav-title-item"><img src="../img/zhiy@2x.png" alt=""><p>志愿服务</p></div>
-      <div class="nav-title-item"><img src="../img/wenhua@2x.png" alt=""><p>文化服务</p></div>
+      <router-link  tag="div"  to='/Party_service' class="nav-title-item" >
+      <img src="../img/dang@2x.png" alt=""><p>党员服务</p>
+      </router-link>
+      <router-link  tag="div"  to='/Travel' class="nav-title-item" >
+      <img src="../img/lvyou@2x.png" alt=""><p>旅游服务</p>
+      </router-link>
+      <router-link  tag="div"  to='/Livelihood' class="nav-title-item" >
+     <img src="../img/minsh@2x.png" alt=""><p>民生服务</p>
+      </router-link>
+      <router-link  tag="div"  to='/Grassroots' class="nav-title-item" >
+      <img src="../img/jic@2x.png" alt=""><p>基层治理</p>
+      </router-link>
+      <router-link  tag="div"  to='/Volunteer' class="nav-title-item" >
+      <img src="../img/zhiy@2x.png" alt=""><p>志愿服务</p>
+      </router-link>
+      <router-link  tag="div"  to='/Style' class="nav-title-item" >
+     <img src="../img/wenhua@2x.png" alt=""><p>文化服务</p>
+      </router-link>
     </div>
     <div class="nav-content">
       <div class="nav-content-title">
@@ -26,7 +38,9 @@
         <span class="title_font">红石榴村美景</span>
       </div>
       <div class="nav-content-container">
-
+        <div class="left"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
+        <div class="content"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
+        <div class="right"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
       </div>
     </div>
     <div class="nav-content">
@@ -34,7 +48,9 @@
         <span class="title_font">石榴红获得殊荣</span>
       </div>
       <div class="nav-content-container">
-
+        <div class="left"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
+        <div class="content"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
+        <div class="right"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
       </div>
     </div>
   </div>
@@ -45,13 +61,14 @@ export default{
 }
 </script>
 <style scoped>
+
   .nav-img img {
     width: 100%;
   }
   .nav-title{
     display: flex;
     flex-wrap:wrap;
-    margin-top: 0px;
+    margin-bottom: 10px;
   }
   .nav-title-item{
     width: 25%;
@@ -59,11 +76,15 @@ export default{
   }
   .nav-title-item img{
     width: 35%;
+    height: 45%;
     margin-top: 5px;
+
   }
   .nav-title-item p{
     font-size: 12px;
     margin-top: 3px;
+    margin-bottom: 5px;
+    /*border: 1px solid #000000;*/
   }
   .nav-content{
     margin-bottom: 10px;
@@ -114,7 +135,46 @@ export default{
     margin-top: 30px;
   }
   .nav-content-container{
-    background-color: red;
-    height: 150px;
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+  .nav-content-container .left{
+    flex: 1;
+    margin-top: 25px;
+  }
+  .nav-content-container .content{
+    flex: 2;
+    margin-left:15px;
+    margin-right: 15px;
+
+  }
+  .nav-content-container .right{
+     flex: 1;
+    margin-top: 25px;
+   }
+  .nav-content-container .left img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px #fff;
+    -webkit-transition:all .3s ease-in-out .1s;
+    -moz-transition:all .3s ease-in-out .1s;
+    -o-transition:all .3s ease-in-out .1s;
+  }
+  .nav-content-container .content img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px #fff;
+    -webkit-transition:all .3s ease-in-out .1s;
+    -moz-transition:all .3s ease-in-out .1s;
+    -o-transition:all .3s ease-in-out .1s;
+  }
+  .nav-content-container .right img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px #fff;
+    -webkit-transition:all .3s ease-in-out .1s;
+    -moz-transition:all .3s ease-in-out .1s;
+    -o-transition:all .3s ease-in-out .1s;
   }
 </style>
