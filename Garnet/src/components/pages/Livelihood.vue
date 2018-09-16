@@ -2,27 +2,26 @@
   <div >
     <top :img="urls"></top>
     <div class="content">
-      <div class="content-item" v-for="item in lv">
+      <router-link tag='div'  class="content-item" v-for="(item,index) in lv"  :to="{ name: 'Livelihood_li', params: { id: index+1 }}" :key="index">
         <span>{{item}}</span>
         <p><img src="../../../static/img/goto.png"></p>
-      </div>
+      </router-link>
     </div>
-
   </div>
 </template>
 <script>
-  import Top from'../common/Top.vue'
-  export default {
-    components:{
-      Top
-    },
-    data(){
-      return{
-        urls:'../../../static/img/minshengfuw@2x.png',
-        lv:["人口计生","社会保障","就业咨询","残疾人事务","便民服务"]
-      }
+import Top from '../common/Top.vue'
+export default {
+  components: {
+    Top
+  },
+  data () {
+    return {
+      urls: '../../../static/img/minshengfuw@2x.png',
+      lv: ['人口计生', '社会保障', '就业咨询', '残疾人事务', '便民服务']
     }
   }
+}
 </script>
 <style scoped>
   .content-item{

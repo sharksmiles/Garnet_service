@@ -57,11 +57,10 @@
 </template>
 <script>
 export default{
-  name:'index'
+  name: 'index'
 }
 </script>
 <style scoped>
-
   .nav-img img {
     width: 100%;
   }

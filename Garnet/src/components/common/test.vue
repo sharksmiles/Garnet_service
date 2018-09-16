@@ -5,7 +5,7 @@
      </div>
      <div class="bottom_container_right">
       <span>{{data.title}}</span>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.content}}</p>
+      <p>{{data.content}}</p>
       <slot>
         <p class="time">2018-09-04</p>
       </slot>
@@ -15,9 +15,9 @@
 </template>
 
 <script>
-  export default {
-    props:['data']
-  }
+export default {
+  props: ['data']
+}
 </script>
 <style scoped>
   .bottom_footer{
@@ -60,7 +60,6 @@
     text-overflow: ellipsis;
     padding-right: 10px;
     font-size: 14px;
-
 
   }
   .bottom_container_right p{

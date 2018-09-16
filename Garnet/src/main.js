@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import Calendar from 'vue2-datepick'
+Vue.use(Calendar)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

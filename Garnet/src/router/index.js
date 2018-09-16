@@ -11,8 +11,9 @@ import Style from '../components/pages/Style.vue'
 import Style_footer from '../components/pages/Style_footer.vue'
 import Volunteer from '../components/pages/Volunteer.vue'
 import Volunteer_footer from '../components/pages/Volunteer_footer.vue'
+import Livelihood_li from '../components/pages/Livelihood_li.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   routes: [
@@ -24,60 +25,69 @@ export default new Router({
     {
       path: '/Grassroots',
       name: 'Grassroots',
-      component:Grassroots_governance,
-      children:[
+      component: Grassroots_governance,
+      children: [
         {
           path: '/Grassroots_footer/:id',
           name: 'Grassroots_footer',
-          component:Grassroots_footer
+          component: Grassroots_footer
         }
-      ],redirect:'/Grassroots_footer/1'
+      ],
+      redirect: '/Grassroots_footer/1'
     },
     {
       path: '/Party_service',
       name: 'Party_service',
-      component:Party_service,
-      children:[
+      component: Party_service,
+      children: [
         {
           path: '/Party_footer/:id',
           name: 'Party_footer',
-          component:Party_footer
+          component: Party_footer
         }
-      ],redirect:'/Party_footer/1'
+      ],
+      redirect: '/Party_footer/1'
     },
     {
       path: '/Travel',
       name: 'Travel',
-      component:Travel,
+      component: Travel
     },
     {
       path: '/Livelihood',
       name: 'Livelihood',
-      component:Livelihood,
+      component: Livelihood
+    },
+    {
+      path: '/Livelihood_li/:id',
+      name: 'Livelihood_li',
+      component: Livelihood_li
     },
     {
       path: '/Style',
       name: 'Style',
-      component:Style,
-      children:[
+      component: Style,
+      children: [
         {
           path: '/Style_footer/:id',
           name: 'Style_footer',
-          component:Style_footer
+          component: Style_footer
         }
-      ],redirect:'/Style_footer/1'
+      ],
+      redirect: '/Style_footer/1'
     },
     {
       path: '/Volunteer',
       name: 'Volunteer',
-      component:Volunteer,
-      children:[
+      component: Volunteer,
+      children: [
         {
           path: '/Volunteer_footer/:id',
           name: 'Volunteer_footer',
-          component:Volunteer_footer
+          component: Volunteer_footer
         }
-      ],redirect:'/Volunteer_footer/1'
+      ],
+      redirect: '/Volunteer_footer/1'
     }
   ]
 })

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bottom_class">
        <ul>
       <router-link tag="li" v-for="(item,index) in tar" :to='item.link' :key="index"><li>{{item.title}}</li></router-link>
     </ul>
@@ -7,16 +7,18 @@
 </template>
 <script>
 export default {
-  name: 'alinkword',
-  data () {
-    return {
-    }
-  },
+  name: 'Links',
   props: ['tar']
-
 }
 </script>
 <style scoped>
+  .bottom_class{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    border-top:1px solid #e0e0e0;
+  }
   ul{
     display: flex;
     height: 45px;
@@ -36,5 +38,4 @@ export default {
   li:hover{
     background-color: #eaeaea;
   }
-
 </style>
