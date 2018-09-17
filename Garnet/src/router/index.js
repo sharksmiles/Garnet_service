@@ -12,6 +12,7 @@ import Style_footer from '../components/pages/Style_footer.vue'
 import Volunteer from '../components/pages/Volunteer.vue'
 import Volunteer_footer from '../components/pages/Volunteer_footer.vue'
 import Livelihood_li from '../components/pages/Livelihood_li.vue'
+import Exchange from '../components/pages/Exchange'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/Travel',
       name: 'Travel',
       component: Travel
+    },
+    {
+      path: '/Exchange',
+      name: 'Exchange',
+      component: Exchange
     },
     {
       path: '/Livelihood',

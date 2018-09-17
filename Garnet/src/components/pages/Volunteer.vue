@@ -21,7 +21,7 @@ export default {
       links: [{link: '/Volunteer_footer/1', title: '居家养老'},
         {link: '/Volunteer_footer/2', title: '阳光助弱(残)'},
         {link: '/Volunteer_footer/3', title: '妇女之家'},
-        {link: '/Volunteer_footer/4', title: '积分兑换'}
+        {link: '/Exchange', title: '积分兑换'}
       ]
     }
   }
