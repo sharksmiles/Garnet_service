@@ -12,7 +12,10 @@ import Style_footer from '../components/pages/Style_footer.vue'
 import Volunteer from '../components/pages/Volunteer.vue'
 import Volunteer_footer from '../components/pages/Volunteer_footer.vue'
 import Livelihood_li from '../components/pages/Livelihood_li.vue'
-import Exchange from '../components/pages/Exchange'
+import Exchange from '../components/pages/Exchange.vue'
+import Exchange_rules from '../components/pages/Exchange_rules.vue'
+import order from '../components/pages/order.vue'
+import My_exchange from '../components/pages/My_exchange.vue'
 
 Vue.use(Router)
 
@@ -55,9 +58,24 @@ export default new Router({
       component: Travel
     },
     {
+      path: '/My_exchange',
+      name: 'My_exchange',
+      component: My_exchange
+    },
+    {
+      path: '/order',
+      name: 'order',
+      component: order
+    },
+    {
       path: '/Exchange',
       name: 'Exchange',
       component: Exchange
+    },
+    {
+      path: '/Exchange_rules',
+      name: 'Exchange_rules',
+      component: Exchange_rules
     },
     {
       path: '/Livelihood',

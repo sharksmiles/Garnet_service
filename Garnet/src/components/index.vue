@@ -37,27 +37,62 @@
       <div class="nav-content-title">
         <span class="title_font">红石榴村美景</span>
       </div>
-      <div class="nav-content-container">
-        <div class="left"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
-        <div class="content"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
-        <div class="right"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="item in pages">
+            <div class="nav-content-container">
+            <div class="left"><img :src="item.Url" alt=""></div>
+            <div class="content"><img :src="item.Url" alt=""></div>
+            <div class="right"><img :src="item.Url" alt=""></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="nav-content">
       <div class="nav-content-title">
         <span class="title_font">石榴红获得殊荣</span>
       </div>
-      <div class="nav-content-container">
-        <div class="left"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
-        <div class="content"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
-        <div class="right"><img src="http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg" alt=""></div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="item in page">
+            <div class="nav-content-container">
+              <div class="left"><img :src="item.Url" alt=""></div>
+              <div class="content"><img :src="item.Url" alt=""></div>
+              <div class="right"><img :src="item.Url" alt=""></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+  import Swiper from 'swiper';
+  import 'swiper/dist/css/swiper.min.css';
 export default{
-  name: 'index'
+  name: 'index',
+  data(){
+    return{
+      pages:[
+        {Url:"http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg"},
+        {Url:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537194345944&di=4fa2ad9889d2009385cd5a0b0dde2b79&imgtype=0&src=http%3A%2F%2Fpic40.photophoto.cn%2F20160714%2F1155115637630520_b.jpg"},
+        {Url:"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1336695672,2078709898&fm=26&gp=0.jpg"},
+        {Url:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537194454932&di=91f481c563706907dc893b92212a2d8b&imgtype=0&src=http%3A%2F%2Fpic110.nipic.com%2Ffile%2F20160924%2F3506043_212724230000_2.jpg"},
+        {Url:"http://a0.att.hudong.com/54/49/01300542891809141879496908378.jpg"},
+      ],
+      page:[
+        {Url:"https://img02.sogoucdn.com/app/a/100520093/b692ca88cf40622d-c4c351c548f54192-3047a3e6fe3178e1ebaf106b19653e19.jpg"},
+        {Url:"https://img01.sogoucdn.com/app/a/100520093/b692ca88cf40622d-c4c351c548f54192-9b31be1c6e33db79adc5f293470100b2.jpg"},
+        {Url:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537195091569&di=a7e31c1575d006e6f925d2618936f5ab&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2017-12-26%2F5a41b82d448ae.jpg"},
+        {Url:"http://a2.att.hudong.com/79/22/01000000000000119062273272179.jpg"},
+        {Url:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537195091569&di=7f6e4eeb9bd181012d1bee499008d5a5&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2Fimg13%2Fc3%2F39%2Fd%2F65.jpg"},
+      ]
+    }
+  },
+  mounted(){
+    var mySwiper = new Swiper('.swiper-container', {})
+  }
 }
 </script>
 <style scoped>
@@ -140,7 +175,7 @@ export default{
   }
   .nav-content-container .left{
     flex: 1;
-    margin-top: 25px;
+    margin-top: 30px;
   }
   .nav-content-container .content{
     flex: 2;
@@ -150,10 +185,11 @@ export default{
   }
   .nav-content-container .right{
      flex: 1;
-    margin-top: 25px;
+    margin-top: 30px;
    }
   .nav-content-container .left img{
     width: 100%;
+    height: 75px;
     border-radius: 5px;
     box-shadow: 1px 1px #fff;
     -webkit-transition:all .3s ease-in-out .1s;
@@ -162,6 +198,7 @@ export default{
   }
   .nav-content-container .content img{
     width: 100%;
+    height: 150px;
     border-radius: 5px;
     box-shadow: 5px 5px #fff;
     -webkit-transition:all .3s ease-in-out .1s;
@@ -170,6 +207,7 @@ export default{
   }
   .nav-content-container .right img{
     width: 100%;
+    height: 75px;
     border-radius: 5px;
     box-shadow: 1px 1px #fff;
     -webkit-transition:all .3s ease-in-out .1s;
